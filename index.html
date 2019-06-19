@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+  <!-- <title>大秦IDskin手机彩膜定制系统，专为手机店增值业务差异化经营设计。可个性化手机彩膜定制和手机壳定制，具备手机操作，物理刀切割、云端大数据等特点。</title> -->
+  <meta name="keywords"
+    content="hydrogel film_hydrogel shockproof film_cutting hydrogel film_protective film_film screen protector system_film plotter_IDskin_IDskin Cut " />
+  <meta name="description"
+    content="IDskin is specialized of making mobile phone hydrogel film , include front, back and side. Very strong and can repair the scratches automatically. Suitable for starting a small business in phone store, mobile accessories store, shopping mall, online business and so on!" />
+  <link rel="shortcut icon" href="./static/img/favicon.ico" />
+
+  <!-- 返回顶部按钮 需要依赖于 jquery -->
+
+  <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.js"></script>
+  <!-- 打开网站的动画样式 -->
+  <style type="text/css">
+    #Loading {
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
+      z-index: 100;
+    }
+
+    @-webkit-keyframes ball-beat {
+      50% {
+        opacity: 0.2;
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    @keyframes ball-beat {
+      50% {
+        opacity: 0.2;
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    .ball-beat>div {
+      background-color: #279fcf;
+      width: 15px;
+      height: 15px;
+      border-radius: 100% !important;
+      margin: 2px;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      display: inline-block;
+      -webkit-animation: ball-beat 0.7s 0s infinite linear;
+      animation: ball-beat 0.7s 0s infinite linear;
+    }
+
+    .ball-beat>div:nth-child(2n-1) {
+      -webkit-animation-delay: 0.35s !important;
+      animation-delay: 0.35s !important;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- 打开网站动画 -->
+  <div id="Loading">
+    <div class="loader-inner ball-beat">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+
+
+  <!-- 后台留言没做好，先使用金数据 -->
+  <script src="https://jinshuju.net/f/rm7ph9/embedded.js?banner=show&background=white&height=837"></script>
+</body>
+
+</html>
