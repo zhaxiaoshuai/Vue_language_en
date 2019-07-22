@@ -7,7 +7,7 @@
           <!-- 左侧电话 -->
           <ul class="phone clearfix">
             <li v-for="(header, index) in headers" :key="index">
-              <img :src="header.imgs" alt="icon">
+              <img :src="header.imgs" alt="icon" />
               <span>{{header.content}}</span>
             </li>
           </ul>
@@ -18,7 +18,7 @@
         <div class="header-down-auto clearfix">
           <ul class="header-down-left clearfix">
             <li>
-              <img src="../../../static/img/logo.png" alt="ID-skin_logo" @click="goTo('/index')">
+              <img src="../../../static/img/logo.png" alt="ID-skin_logo" @click="goTo('/index')" />
             </li>
           </ul>
           <ul class="header-down-right clearfix">

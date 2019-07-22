@@ -20,34 +20,33 @@ export default {
       vueVideo: "../../../static/video/Video_2019-06-17_143421.mp4",
       videos_auto: [
         {
-          p: "IDskin Cut Device Installed Video",
-          name: "IDskinTest",
+          p: "IDskin cut machine unboxing and installation",
           videoUrl:
-            '<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=s08844ky2kq" allowFullScreen="true"></iframe>'
+            '<iframe src="https://player.vimeo.com/video/344223202" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
         },
         {
-          p: "IDskin Cut Software Installed Video",
+          p: "IDskin cut APP installation",
           videoUrl:
-            '<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=o08854h5qbz" allowFullScreen="true"></iframe>'
+            '<iframe src="https://player.vimeo.com/video/344223511" width="640" height="1138" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
         },
         {
-          p: "IDskin Cut System Operation Video",
+          p: "IDskin replace cutting blade ",
           videoUrl:
-            '<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=d0885hf19n2" allowFullScreen="true"></iframe>'
+            '<iframe src="https://player.vimeo.com/video/344223627" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
         },
         {
-          p: "IDskin Cut System Installed Film Video ",
+          p: "IDskin cut machine operation ",
           videoUrl:
-            '<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=v0885t67fj3" allowFullScreen="true"></iframe>'
+            '<iframe src="https://player.vimeo.com/video/344223673" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
         },
         // {
         //   p: "IDskin手机膜定制系统材料充值",
         //   videoUrl: '<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=q08856sn425" allowFullScreen="true"></iframe>'
         // },
         {
-          p: "IDskin Cut Device Knife Head Installed Video",
+          p: "IDskin film installation",
           videoUrl:
-            '<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=j088488ta6u" allowFullScreen="true"></iframe>'
+            '<iframe src="https://player.vimeo.com/video/344223748" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
         }
       ]
     };

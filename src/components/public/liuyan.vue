@@ -76,14 +76,15 @@ export default {
       phoneNumber: "",
       email: "",
       country: "",
-      content: ""
+      content: "",
     };
   },
   created() {
     // https://www.vue-js.com/api/v1/topics
-    axios.get("").then(res => {
-      // console.log(res.data);
-    });
+    axios
+      .get("")
+      .then(res => {})
+      .catch(err => {});
   },
 
   methods: {
@@ -116,6 +117,8 @@ export default {
           "";
         return;
       }
+
+      
     }
   }
 };

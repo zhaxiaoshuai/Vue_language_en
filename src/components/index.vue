@@ -58,6 +58,8 @@
   </div>
 </template>
 <script>
+import axios from "axios";
+import VueAxios from "vue-axios";
 import banner from "./public/banner";
 export default {
   name: "index",

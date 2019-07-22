@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="right_footer">
-          <!-- <liuyan></liuyan> -->
+          <liuyan></liuyan>
         </div>
       </div>
     </footer>
