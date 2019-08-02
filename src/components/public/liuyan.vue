@@ -13,7 +13,7 @@
                 name="name"
                 class="zxf-input icon-zx-1"
                 v-model="name"
-              >
+              />
             </li>
             <li>
               <input
@@ -23,7 +23,7 @@
                 name="phoneNumber"
                 class="zxf-input icon-zx-3"
                 v-model="phoneNumber"
-              >
+              />
             </li>
             <li>
               <input
@@ -34,7 +34,7 @@
                 maxlength="30"
                 class="zxf-input icon-zx-4"
                 v-model="email"
-              >
+              />
             </li>
             <li>
               <input
@@ -45,7 +45,7 @@
                 maxlength="30"
                 class="zxf-input icon-zx-4"
                 v-model="country"
-              >
+              />
             </li>
           </ul>
         </div>
@@ -58,7 +58,7 @@
             placeholder="Message"
             v-model="content"
           ></textarea>
-          <br>
+          <br />
           <button type="button" class="zxf-btn hover-opacity-8" @click="Submit">Submit</button>
         </div>
       </form>
@@ -76,15 +76,11 @@ export default {
       phoneNumber: "",
       email: "",
       country: "",
-      content: "",
+      content: ""
     };
   },
   created() {
     // https://www.vue-js.com/api/v1/topics
-    axios
-      .get("")
-      .then(res => {})
-      .catch(err => {});
   },
 
   methods: {
@@ -111,14 +107,55 @@ export default {
       if (!name || !phoneNumber || !email || !country || !content) {
         alert("请完善信息");
         return;
-      } else {
-        alert("留言成功，我们将尽快联系您");
-        this.name = this.phoneNumber = this.email = this.country = this.content =
-          "";
-        return;
       }
 
-      
+      this.$axios
+        .post("http://msg.id-skin.com:5000/json", {
+          name: name,
+          phone: phoneNumber,
+          email: email,
+          country: country,
+          message: content
+        })
+        .then(function(response) {
+          console.log("成功");
+          console.log(response);
+          console.log(name, phoneNumber, email, country, content);
+        })
+        .catch(function(error) {
+          console.log("失败");
+          console.log(error);
+          console.log(name, phoneNumber, email, country, content);
+        });
+
+      // axios
+      //   .post(
+      //     "/apis/json",
+      //     {
+      //       name: this.name,
+      //       phone: this.phone,
+      //       email: this.email,
+      //       country: this.country,
+      //       message: this.content
+      //     },
+      //     {
+      //       emulateJSON: true
+      //     }
+      //   )
+      //   .then(res => {
+      //     console.log(res);
+      //     return res.json()
+      //   })
+      //   .then(data =>{
+      //     console.log(data)
+      //   })
+      //   .catch(err => {
+      //     alert(err);
+      //   });
+
+      this.name = this.phoneNumber = this.email = this.country = this.content =
+        "";
+      return;
     }
   }
 };

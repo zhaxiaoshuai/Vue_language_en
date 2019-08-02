@@ -10,6 +10,9 @@
               <img :src="header.imgs" alt="icon" />
               <span>{{header.content}}</span>
             </li>
+            <li style="line-height:30px;">
+              <a href="http://cn.id-skin.com/" target="blank" style="color:#fff;">中文站</a>
+            </li>
           </ul>
         </div>
       </div>

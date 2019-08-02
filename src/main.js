@@ -10,10 +10,10 @@ Vue.use(VueWechatTitle)
 
 // axios
 import axios from 'axios'
-import VueAxios from 'vue-axios'
-// #通过use方法加载axios插件
-Vue.use(VueAxios,axios)
-
+Vue.prototype.$axios = axios
+// axios.defaults.baseURL = '/api'
+// 请求头
+axios.defaults.headers.post["Content-Type"] = "application/json"
 
 
 // 引入全局css 公用 css
