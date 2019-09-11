@@ -13,7 +13,7 @@
     <banner :bannerImg="bannerImg">
       <p>
         <span>HOW TO ADD PROFITS</span>
-        <br>FOR YOUR STORE ?
+        <br />FOR YOUR STORE ?
       </p>
     </banner>
     <!-- banner -->
@@ -21,10 +21,10 @@
     <div class="idskin_best clearfix">
       <div class="newindexBG_one clearfix">
         <div class="newindexBG_one_auto clearfix">
-          <img src="../assets/img/newindexBG_two.png" alt>
+          <img src="../assets/img/newindexBG_two.png" alt />
         </div>
       </div>
-      <img src="../assets/img/newindexBG_three.png" alt>
+      <img src="../assets/img/newindexBG_three.png" alt />
       <div class="idskin_best_auto">
         <p class="pbold">IDskin is Your Best Choice</p>
         <!-- <img src="../assets/img/index_id_skin_img.png" alt> -->
@@ -43,18 +43,26 @@
         <ul class="clearfix">
           <router-link to="./custom">
             <li>
-              <img src="../assets/img/index_OEM.png" alt>
+              <img src="../assets/img/index_OEM.png" alt />
             </li>
             <li>
-              <img src="../assets/img/index_ODM.png" alt>
+              <img src="../assets/img/index_ODM.png" alt />
             </li>
             <li>
-              <img src="../assets/img/index_AGENT.jpg" alt>
+              <img src="../assets/img/index_AGENT.jpg" alt />
             </li>
           </router-link>
         </ul>
       </div>
     </div>
+
+    <!-- <tr>
+      <th v-for="(item, index) in Rob" :key="index">
+        {{item.text}}
+        <br />
+        <button @click="getText(item.text)">点击</button>
+      </th>
+    </tr> -->
   </div>
 </template>
 <script>
@@ -83,12 +91,32 @@ export default {
           title1: "* Can add 30% profits to your",
           title2: "&nbsp;&nbsp;&nbsp;store!"
         }
-      ]
+      ],
+      // Rob: [
+      //   { text: 1111, id: 1 },
+      //   { text: 2222, id: 2 },
+      //   { text: 3333, id: 3 },
+      //   { text: 4444, id: 4 },
+      //   { text: 5555, id: 5 },
+      //   { text: 6666, id: 6 }
+      // ]
     };
   },
   components: {
     banner
-  }
+  },
+  // methods: {
+  //   getText(text) {
+  //     this.Rob.some((item, i) => {
+  //       if (item.text === text) {
+  //       this.$axios.get("http://192.168.2.216:8081/Softwork/unfinishproject",{
+  //         parmas:{projectname:text,Date:new Date.now()}
+  //       })
+        
+  //       }
+  //     });
+  //   }
+  // }
 };
 </script>
 <style scope>

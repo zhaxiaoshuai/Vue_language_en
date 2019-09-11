@@ -14,6 +14,7 @@ import Agent from '@/components/details/Agent'
 import Contact_us from '@/components/details/Contact_us'
 
 import Video from '@/components/details/Video'
+import appDownload from '@/components/details/appDownload'
 
 
 // Vue官方介绍这么写是 懒加载路由，实测无卵用
@@ -96,6 +97,16 @@ export default new Router({
 				title: 'how to cut hydrogel ?',
 			}
 		},
+    {
+      path: "/appdownload",
+      name: "appDownload",
+      component: appDownload,
+      meta: {
+        title: 'Download your app',
+      }
+    },
+
+
 
 		// 测试路由
 		{
