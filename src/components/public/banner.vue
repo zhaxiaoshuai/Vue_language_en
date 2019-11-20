@@ -3,7 +3,7 @@
   * 使用方法
   * 使用时候需要引入 import banner form 'xxxx'  <banner :bannerImg="bannerImg"></banner> 方式调用 还没有注册为全局组件 
   * 控制图片的属性是 'bannerImg' 只需要在 父组件里声明是哪张图片即可 ps:最好是在线引用的图片 例如: bannerImg: "http://daqin.cn/id_skin_imgs/bg-1111.jpg",
-  * ps:建议在引用的时候用一个div套着 避免样式重复 详细看index.vue是如何引用的 and Bob is your uncle
+  * ps:建议在引用的时候用一个div套着 避免样式重复 详细看 index.vue 是如何引用的 and Bob is your uncle
   -->
   <div id="banner">
     <div

@@ -16,6 +16,8 @@ import Contact_us from '@/components/details/Contact_us'
 import Video from '@/components/details/Video'
 import appDownload from '@/components/details/appDownload'
 
+import privacyagreement from '@/components/details/privacyagreement'
+
 
 // Vue官方介绍这么写是 懒加载路由，实测无卵用
 
@@ -97,14 +99,22 @@ export default new Router({
 				title: 'how to cut hydrogel ?',
 			}
 		},
-    {
-      path: "/appdownload",
-      name: "appDownload",
-      component: appDownload,
-      meta: {
-        title: 'Download your app',
-      }
-    },
+		{
+			path: "/appdownload",
+			name: "appDownload",
+			component: appDownload,
+			meta: {
+				title: 'Download your app',
+			}
+		},
+		{
+			path: "/privacyagreement",
+			component: privacyagreement,
+			meta: {
+				title: 'privacyagreement',
+			}
+			
+		},
 
 
 
