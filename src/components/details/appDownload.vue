@@ -24,15 +24,11 @@ export default {
       bannerImg: "../../static/img/downloadAppBanner.jpg",
       Appdownloads: [
         {
-          pText: "IDskin_Bluetooth",
-          spanText: "VersionModel：V1.00 (17.9MB)",
-          aHref: "../../../static/en/Bt-IDskin-Cut-En.apk"
+          pText: "New Update IDskin-Bluetooth",
+          spanText: "VersionModel：V1.00 (12.0MB)",
+          aHref: "../../../static/en/2019.12.25-IDskin_Cut_Release.apk"
         },
-        {
-          pText: "IDskin_USB_Port",
-          spanText: "VersionModel：V1.00 (18.0MB)",
-          aHref: "../../../static/en/Usb-IDskin-Cut-En.apk"
-        }
+    
       ]
     };
   },
@@ -56,7 +52,7 @@ export default {
   text-align: center;
   margin-right: 20px;
   margin-top: 20px;
-  width: 48%;
+  width: 53%;
   float: left;
 }
 .downloadsColor img {
