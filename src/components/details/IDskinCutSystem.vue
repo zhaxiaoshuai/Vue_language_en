@@ -87,7 +87,24 @@
         <p class="fontcolor2">Cutter Specification</p>
       </div>
       <img src="../../../static/img/cutSystem/cutterspec.jpg" alt />
+      <img src="../../../static/img/cutSystem/anti.jpg" alt="">
     </div>
+    <!-- 第七张 -->
+    <div class="colorful">
+      <img src="../../../static/img/cutSystem/colorful.jpg" alt="">
+    </div>
+    <!-- 第八张
+    IDskin Cutter Accessories List
+     -->
+     <div class="accessories">
+       <img src="../../../static/img/cutSystem/idskincutter.jpg" alt="">
+     </div>
+     <!-- 第九张
+     IDskin Cutter Service
+      -->
+      <div class="idskinservice">
+        <img src="../../../static/img/cutSystem/idskinservice.jpg" alt="">
+      </div>
   </div>
 </template>
 <script>
@@ -310,4 +327,27 @@ export default {
   background: #0084d7;
   padding: 30px 0;
 }
+/* 第七张 */
+.colorful{
+  width: 1100px;
+  margin: 0 auto;
+}
+.colorful img{
+  max-width: 100%;
+}
+/* 第八张 */
+.accessories{
+  width: 1100px;
+  margin: 0 auto;
+}
+/* 第九张 */
+.idskinservice{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+
+
+
+
 </style>
