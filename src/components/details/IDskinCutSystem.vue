@@ -4,85 +4,89 @@
     * 没有细化分组件，这些只能用一次，没必要感觉
   -->
   <div id="idskincutsystem">
-    <banner :bannerImg="bannerImg">
-      <img src="../../../static/img/id-skin_jiqi.png" alt>
-    </banner>
+    <banner :bannerImg="bannerImg"></banner>
     <!-- 第一张 
-    Your mobile phone can operate machine
+    4000+Models Fast Update Freely
     -->
-    <div class="mobile_phone clearfix">
-      <p>Your mobile phone can operate machine</p>
-      <span>So easy!</span>
-      <img src="../../../static/img/phone-two.png" alt>
+    <div class="models">
+      <p>4000+Models Fast Update Freely</p>
+      <div></div>
+      <img src="../../../static/img/cutSystem/jixingNum.png" alt />
     </div>
+
     <!-- 第二张 
-      Over 1800 templates in
-      the cloud, update timely .
+      phone list
     -->
-    <div class="template">
-      <img src="../../../static/img/two-banner-one.png" alt>
-      <div class="template-p">
-        <p>
-          Over
-          <span>4000</span> templates in
-        </p>
-        <p>the cloud, update timely .</p>
+    <div class="phonelist clearfix">
+      <div class="phonelistwidth">
+        <div v-for="(phonelist, index) in phonelists1" :key="phonelist.id" class="phonelistshow">
+          <img :src="phonelist.img" :alt="phonelist.img" />
+          <p>{{phonelist.title.toUpperCase()}}</p>
+          <p></p>
+        </div>
+        <img class="m0a" src="../../../static/img/cutSystem/phoneback.png" alt />
+        <div v-for="(phonelist, index1) in phonelists2" :key="phonelist.id" class="phonelistshow">
+          <img :src="phonelist.img" :alt="phonelist.img" />
+          <p>{{phonelist.title.toUpperCase()}}</p>
+          <p></p>
+        </div>
+        <img class="m0a" src="../../../static/img/cutSystem/phoneback.png" alt />
       </div>
     </div>
-<!-- 测试视频播放 -->
-<!--     
-    <div style="  width:1100px; margin: 0 auto; ">
-      <iframe
-        frameborder="0"
-        src="https://v.qq.com/txp/iframe/player.html?vid=n0848tetmmp"
-        allowfullscreen="true"
-        style="width:100%;height:600px;"
-      ></iframe>
-    </div> -->
 
     <!-- 第三张 
-      四张图 + 固定图
+      IDskin Cutter Easy Operation
     -->
-    <div class="four-img">
-      <ul class="clearfix">
-        <li v-for="(four_img, index) in four_imgs" :key="index">
-          <img :src="four_img.imgs" alt>
-        </li>
-        <div class="threeFxed">
-          <img src="../../../static/img/three-five.jpg" alt>
-        </div>
-      </ul>
+    <div class="idskincutter">
+      <p class="p_big">IDskin Cutter Easy Operation</p>
+      <p
+        class="p_small"
+      >One-step cut, 30 Seconds custom protector, Protect your mobile with shield !</p>
     </div>
 
     <!-- 第四张 
-      四张图 + 介绍
+      Profit on the day No stock 
     -->
-    <div class="four_jieshao">
-      <ul class="clearfix">
-        <li v-for="(four_jieshao_img, index) in four_jieshao_imgs" :key="index">
-          <img :src="four_jieshao_img.imgs" alt>
-          <p>{{four_jieshao_img.title1}}</p>
-          <p>{{four_jieshao_img.title2}}</p>
-        </li>
-      </ul>
+    <div class="profit clearfix">
+      <div class="ptitle">
+        <p class="marb fontb">
+          Profit on the day
+          <span>No stock</span>
+        </p>
+        <p>
+          Custom screen protector, full body back protector,
+          <br />colorful mobile skin, any model ,any quantity!
+        </p>
+      </div>
+      <div class="threeimgshow clearfix">
+        <div v-for="(threeImgShowList, index) in threeImgShowLists" :key="index">
+          <img :src="threeImgShowList.imgURL" :alt="threeImgShowList.title" />
+          <p>{{threeImgShowList.title}}</p>
+        </div>
+      </div>
     </div>
 
     <!-- 第五张 
-      Value added service for mobile store ,
-      mobile accessory store ,repair store ......
+      Samples show
     -->
-    <div class="five_val clearfix">
-      <div class="five_val_p">
-        <p>Value added service for mobile store ,</p>
-        <p>mobile accessory store ,repair store ......</p>
+    <div class="samples">
+      <img style="padding-bottom:20px;" src="../../../static/img/cutSystem/samples-show.png" alt />
+      <img src="../../../static/img/cutSystem/phonelist.jpg" alt />
+      <div class="focused">
+        <p>
+          Focused on 17 years, IDskin strive to
+          <br />Support high quality machine to all customers!
+        </p>
       </div>
-      <div class="five_val_ul">
-        <ul class="clearfix">
-          <li v-for="(five_six_img, index) in five_six_imgs" :key="index">
-            <img :src="five_six_img.imgs" alt>
-          </li>
-        </ul>
+      <img src="../../../static/img/cutSystem/cutting.png" alt />
+    </div>
+    <!-- 第六张  -->
+    <div class="cutteridskin">
+      <div class="cutteridskinback">
+        <p class="fontcolor1">IDskin</p>
+        <p class="fontcolor2">Cutter Specification</p>
       </div>
+      <img src="../../../static/img/cutSystem/cutterspec.jpg" alt />
     </div>
   </div>
 </template>
@@ -92,45 +96,55 @@ export default {
   name: "idskincutsystem",
   data() {
     return {
-      bannerImg: "../../../static/img/bg-1111.jpg",
-      // 第三个版块的四张图
-      four_imgs: [
-        { imgs: "./static/img/three-one.jpg" },
-        { imgs: "./static/img/three-two.jpg" },
-        { imgs: "./static/img/three-three.jpg" },
-        { imgs: "./static/img/three-four.jpg" }
-      ],
-      // 第四个版块四张图
-      four_jieshao_imgs: [
+      bannerImg: "../../../static/img/cutSystem/banner.jpg",
+      // 4000+图片下方六张图片 分为两个循环
+      phonelists1: [
         {
-          imgs: "./static/img/four_one.png",
-          title1: "Free of stock pressure",
-          title2: ""
+          img: require("../../../static/img/cutSystem/phonelist1.png"),
+          title: "iphone",
+          id: 1
         },
         {
-          imgs: "./static/img/four-two.png",
-          title1: "Fast and Easy operate",
-          title2: ""
+          img: require("../../../static/img/cutSystem/phonelist2.png"),
+          title: "HUAWEI",
+          id: 2
         },
         {
-          imgs: "./static/img/four-three.png",
-          title1: "Small machine,",
-          title2: "take up less space."
-        },
-        {
-          imgs: "./static/img/four-four.png",
-          title1: "Low investment ",
-          title2: "starts at $1000"
+          img: require("../../../static/img/cutSystem/phonelist3.png"),
+          title: "SAMSUNG",
+          id: 3
         }
       ],
-      // 第五个模块 六张图
-      five_six_imgs: [
-        { imgs: "./static/img/fiv_one.jpg" },
-        { imgs: "./static/img/fiv_two.jpg" },
-        { imgs: "./static/img/fiv_three.jpg" },
-        { imgs: "./static/img/fiv_four.jpg" },
-        { imgs: "./static/img/fiv_five.jpg" },
-        { imgs: "./static/img/fiv_six.jpg" }
+      phonelists2: [
+        {
+          img: require("../../../static/img/cutSystem/phonelist4.png"),
+          title: "OPPO",
+          id: 4
+        },
+        {
+          img: require("../../../static/img/cutSystem/phonelist5.png"),
+          title: "vivo",
+          id: 5
+        },
+        {
+          img: require("../../../static/img/cutSystem/phonelist6.png"),
+          title: "MI",
+          id: 6
+        }
+      ],
+      threeImgShowLists: [
+        {
+          imgURL: require("../../../static/img/cutSystem/threeimg1.jpg"),
+          title: "Customized on site"
+        },
+        {
+          imgURL: require("../../../static/img/cutSystem/threeimg2.jpg"),
+          title: "No machine damage"
+        },
+        {
+          imgURL: require("../../../static/img/cutSystem/threeimg3.jpg"),
+          title: "No stock"
+        }
       ]
     };
   },
@@ -143,126 +157,157 @@ export default {
 /* #idskincutsystem {
   margin-top: 156px;
 } */
-/* banner */
-
-.index_banner_auto img {
-  display: block;
-  margin: 80px auto;
-}
-
-/* 第一张 */
-.mobile_phone {
-  width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-  background: url(../../assets/img/bg-2222.jpg) no-repeat;
-}
-.mobile_phone p {
-  margin: 90px 0 40px 0;
-  font-size: 45px;
-}
-.mobile_phone span {
-  background: #319bde;
-  font-size: 40px;
-  border-radius: 40px;
-  padding: 5px 30px;
+/* 公共 */
+.fontcolor1 {
   color: #fff;
-  box-sizing: border-box;
+  font-size: 80px;
 }
-.mobile_phone img {
-  margin: 70px 0 20px 0;
+.fontcolor2 {
+  color: #053858;
+  font-size: 20px;
+}
+
+.fontb {
+  font-weight: bold;
+}
+.marb {
+  margin-bottom: 20px;
+}
+.m0a {
+  display: block;
+  margin: 0 auto;
+}
+.p_small {
+  font-size: 30px;
+  letter-spacing: -2px;
+}
+.p_big {
+  font-size: 40px;
+  font-weight: bold;
+}
+/* 第一张 */
+.models {
+  width: 100%;
+  min-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.models img {
+  display: block;
+  margin: 0 auto;
+}
+.models p {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.models div {
+  width: 250px;
+  height: 5px;
+  margin: 0 auto;
+  background: #000;
 }
 /* 第二张 */
-.template {
-  width: 1100px;
+.phonelist {
+  width: 100%;
+  min-width: 1100px;
+
   margin: 0 auto;
-  background: url(../../assets/img/bg-three.jpg) no-repeat;
-  position: relative;
+  padding: 60px 0;
+  background: url("../../../static/img/cutSystem/twoback.jpg") no-repeat center;
 }
-.template img {
+.phonelistwidth {
+  width: 585px;
+  margin: 0 auto;
+}
+.phonelistshow {
+  width: 33%;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  float: left;
+}
+.phonelistshow img {
   display: block;
   margin: 0 auto;
-  padding: 70px 0;
-}
-.template-p {
-  position: absolute;
-  font-size: 45px;
-  color: #000;
-  font-weight: bold;
-  left: 264px;
-  bottom: 255px;
-  text-align: center;
-}
-.template-p span {
-  font-size: 60px;
-  color: #0084d8;
 }
 /* 第三张 */
-.four-img {
-  width: 1100px;
-  margin: 0 auto;
-  position: relative;
+.idskincutter {
+  width: 100%;
+  min-width: 1100px;
+  padding-top: 60px;
+  background: url("../../../static/img/cutSystem/back.jpg") no-repeat center;
+  text-align: center;
+  height: 500px;
 }
-.four-img li {
-  float: left;
-  margin-top: 5px;
-  margin-right: 3px;
-  width: 547px;
-  height: 572px;
-  cursor: pointer;
-  overflow: hidden;
-}
-.four-img li img {
-  transition: all 1s;
-}
-
-.four-img li img:hover {
-  transform: scale(1.2);
-}
-.threeFxed {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -321px 0 0 -321px;
-}
-
 /* 第四张 */
-.four_jieshao {
+.profit {
   width: 1100px;
   margin: 0 auto;
   text-align: center;
-  padding: 90px 90px 0 90px;
-  box-sizing: border-box;
-  background: #bfddf3;
+  background: #88d0ef;
+  padding-top: 40px;
 }
-.four_jieshao li {
-  float: left;
-  font-size: 40px;
-  width: 50%;
+.profit .ptitle > p {
+  font-size: 20px;
   color: #000;
-  margin-bottom: 85px;
 }
-.four_jieshao li img {
-  margin-bottom: 30px;
+.profit .ptitle > p > span {
+  font-size: 30px;
+  color: #9523bf;
 }
-
+.threeimgshow {
+  width: 745px;
+  margin: 40px auto 100px auto;
+}
+.threeimgshow > div {
+  float: left;
+  width: 33%;
+}
+.threeimgshow div > img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.threeimgshow div > p {
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+  margin-top: 20px;
+  letter-spacing: -1px;
+}
 /* 第五张 */
-.five_val {
+.samples {
   width: 1100px;
   margin: 0 auto;
-  background: #f2f2f2;
+  padding-top: 40px;
+}
+.samples img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.focused {
+  background: url("../../../static/img/cutSystem/back1.png") no-repeat center;
   text-align: center;
+  padding: 60px 0 50px 0;
 }
-.five_val_p {
-  margin: 60px 0px;
-}
-.five_val_p p {
-  font-size: 45px;
-  color: #0084d8;
+.focused > p {
+  font-size: 30px;
+  color: #fff;
   font-weight: bold;
 }
-.five_val_ul li {
-  float: left;
-  margin-right: 3px;
+/* 第六张 */
+.cutteridskin {
+  width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+.cutteridskinback{
+  width: 100%;
+  background: #0084d7;
+  padding: 30px 0;
 }
 </style>
